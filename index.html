@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Centrum dowodzenia · Damian</title>
+<meta name="description" content="Centrum dowodzenia projektami na GitHubie">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Centrum">
+<meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{
+  --bg:#f2f2f7; --bg2:#e9e9f2; --card:rgba(255,255,255,.72); --stroke:rgba(0,0,0,.07);
+  --text:#1c1c1e; --muted:#6e6e73; --accent:#0a84ff; --accent2:#5e5ce6; --green:#30d158;
+  --field:rgba(118,118,128,.12); --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#000; --bg2:#0b0b12; --card:rgba(28,28,30,.66); --stroke:rgba(255,255,255,.08);
+    --text:#f5f5f7; --muted:#98989f; --field:rgba(118,118,128,.24); --shadow:0 8px 30px rgba(0,0,0,.45); }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--text); background:var(--bg); min-height:100vh; -webkit-font-smoothing:antialiased;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;
+  background:radial-gradient(40% 35% at 15% 10%,rgba(10,132,255,.22),transparent 70%),
+             radial-gradient(35% 30% at 90% 20%,rgba(94,92,230,.20),transparent 70%),
+             radial-gradient(40% 40% at 60% 100%,rgba(48,209,88,.12),transparent 70%);}
+.wrap{max-width:1080px;margin:0 auto;padding:20px 18px 48px}
+header{display:flex;align-items:center;gap:14px;margin:14px 0 6px}
+.logo{width:52px;height:52px;border-radius:14px;flex:none;display:grid;place-items:center;font-size:26px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 6px 18px rgba(10,132,255,.35)}
+.eyebrow{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+h1{font-size:32px;line-height:1.1;margin:2px 0 0;font-weight:800;letter-spacing:-.02em}
+.acct{margin-left:auto;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);
+  background:var(--card);border:1px solid var(--stroke);padding:6px 12px 6px 6px;border-radius:999px;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);font-size:14px;font-weight:600}
+.acct img{width:28px;height:28px;border-radius:50%}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.stat{background:var(--card);border:1px solid var(--stroke);border-radius:18px;padding:12px 14px;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:var(--shadow)}
+.stat b{display:block;font-size:24px;font-weight:700;letter-spacing:-.02em}
+.stat span{font-size:12px;color:var(--muted)}
+.toolbar{position:sticky;top:0;z-index:5;display:flex;gap:10px;padding:10px 0;margin:0 -2px;
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.search{flex:1;display:flex;align-items:center;gap:8px;background:var(--field);border-radius:12px;padding:0 12px;height:42px}
+.search svg{flex:none;opacity:.55}
+.search input{flex:1;border:0;outline:0;background:transparent;color:var(--text);font-size:17px;font-family:inherit;min-width:0}
+.seg{display:flex;background:var(--field);border-radius:12px;padding:3px;flex:none}
+.seg button{border:0;background:transparent;color:var(--text);font:600 13px/1 inherit;font-family:inherit;padding:0 12px;border-radius:9px;cursor:pointer;height:36px}
+.seg button.on{background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.15)}
+@media (prefers-color-scheme: dark){.seg button.on{background:#636366}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;margin-top:8px}
+.card{position:relative;background:var(--card);border:1px solid var(--stroke);border-radius:22px;padding:18px;
+  backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:12px;transition:transform .2s ease, box-shadow .2s ease;animation:in .4s ease both}
+.card:hover{transform:translateY(-2px)}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.top{display:flex;gap:12px;align-items:flex-start}
+.ic{width:48px;height:48px;border-radius:13px;flex:none;display:grid;place-items:center;font-size:24px;font-weight:700;color:#fff}
+.title{font-size:18px;font-weight:700;letter-spacing:-.01em;margin:2px 0 3px;line-height:1.25}
+.slug{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);word-break:break-all}
+.badge{margin-left:auto;flex:none;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;
+  color:var(--green);background:rgba(48,209,88,.14);padding:5px 9px;border-radius:999px}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(48,209,88,.25)}
+.badge.off{color:var(--muted);background:var(--field)} .badge.off i{background:var(--muted);box-shadow:none}
+.desc{font-size:15px;line-height:1.45;color:var(--text);opacity:.86;margin:0;flex:1}
+.meta{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted)}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%}
+.btns{display:grid;grid-template-columns:1fr auto;gap:8px}
+.btn{display:flex;align-items:center;justify-content:center;gap:7px;height:44px;border-radius:12px;text-decoration:none;
+  font-weight:600;font-size:15px;transition:opacity .15s, transform .1s}
+.btn:active{transform:scale(.97)}
+.primary{background:var(--accent);color:#fff}
+.primary.dis{background:var(--field);color:var(--muted);pointer-events:none}
+.ghost{background:var(--field);color:var(--accent);padding:0 18px}
+.empty,.note{text-align:center;color:var(--muted);padding:40px 10px;font-size:15px}
+.note{padding:22px 10px 0;font-size:12px}
+.skel{height:210px;border-radius:22px;background:linear-gradient(90deg,var(--field),transparent,var(--field));background-size:200% 100%;animation:sh 1.2s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+@media (max-width:560px){
+  h1{font-size:28px} .acct span{display:none} .acct{padding:6px}
+  .toolbar{flex-direction:column} .seg{align-self:stretch} .seg button{flex:1}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">🛰️</div>
+    <div>
+      <div class="eyebrow">GitHub</div>
+      <h1>Centrum dowodzenia</h1>
+    </div>
+    <a class="acct" href="https://github.com/damiangrok5-droid" target="_blank" rel="noopener">
+      <img src="https://avatars.githubusercontent.com/u/347927826?v=4" alt="">
+      <span>damiangrok5-droid</span>
+    </a>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b id="sTotal">–</b><span>Projekty</span></div>
+    <div class="stat"><b id="sOnline">–</b><span>Online</span></div>
+    <div class="stat"><b id="sLast">–</b><span>Ostatnia zmiana</span></div>
+  </div>
+
+  <div class="toolbar">
+    <label class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Szukaj projektu" autocomplete="off" enterkeyhint="search">
+    </label>
+    <div class="seg" role="tablist" aria-label="Sortowanie">
+      <button class="on" data-sort="pushed">Ostatnie zmiany</button>
+      <button data-sort="name">Nazwa A–Z</button>
+    </div>
+  </div>
+
+  <div id="grid" class="grid"><div class="skel"></div><div class="skel"></div></div>
+  <div id="note" class="note"></div>
+</div>
+
+<script>
+const USER = "damiangrok5-droid";
+const SELF = "centrum-dowodzenia";
+const API = `https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`;
+const FALLBACK_META = {
+  "pharma-market-intelligence-pl-app": {title:"Pharma Market Intelligence PL", description:"Statyczny dashboard rynku leków refundowanych w Polsce na danych publicznych.", emoji:"💊"},
+  "trener-gitara": {title:"Trener Gitara", description:"Aplikacja do nauki gry na gitarze.", emoji:"🎸"}
+};
+const LANG = {JavaScript:"#f1e05a",TypeScript:"#3178c6",HTML:"#e34c26",CSS:"#663399",Python:"#3572A5",Java:"#b07219",
+  "C#":"#178600",Go:"#00ADD8",Rust:"#dea584",Swift:"#F05138",Kotlin:"#A97BFF",Vue:"#41b883",Shell:"#89e051",PHP:"#4F5D95",Dart:"#00B4AB"};
+const GRADS = [["#0a84ff","#5e5ce6"],["#ff9f0a","#ff375f"],["#30d158","#0a84ff"],["#bf5af2","#ff375f"],["#64d2ff","#5e5ce6"],["#ff453a","#ff9f0a"]];
+
+let repos = [], meta = {}, sortBy = "pushed", source = "";
+
+const rtf = new Intl.RelativeTimeFormat("pl", {numeric:"auto"});
+function ago(iso){
+  if(!iso) return "–";
+  const s = (new Date(iso) - Date.now())/1000;
+  const units = [["year",31536000],["month",2592000],["week",604800],["day",86400],["hour",3600],["minute",60]];
+  for(const [u,sec] of units){ if(Math.abs(s) >= sec) return rtf.format(Math.round(s/sec), u); }
+  return "przed chwilą";
+}
+function prettify(name){
+  return name.replace(/[-_]+/g," ").replace(/\b\w/g,c=>c.toUpperCase()).replace(/\bPl\b/g,"PL").replace(/\bApp\b/g,"").trim();
+}
+function hash(s){let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))|0;return Math.abs(h);}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+function normalize(list){
+  return list.filter(r => !r.fork && r.name !== SELF && !r.archived).map(r => {
+    const home = (r.homepage||"").trim();
+    const pages = home ? home : (r.has_pages ? `https://${USER}.github.io/${r.name}/` : "");
+    return {name:r.name, description:r.description, language:r.language, pushed_at:r.pushed_at,
+            html_url:r.html_url || `https://github.com/${USER}/${r.name}`, pages_url:pages, has_pages:!!pages};
+  });
+}
+async function getJSON(url, opts){ const r = await fetch(url, opts); if(!r.ok) throw new Error(r.status); return r.json(); }
+
+async function load(){
+  meta = {...FALLBACK_META};
+  try { const m = await getJSON("meta.json", {cache:"no-cache"}); Object.assign(meta, m.repos||{}); } catch(e){}
+  try {
+    repos = normalize(await getJSON(API, {headers:{Accept:"application/vnd.github+json"}}));
+    source = "na żywo z GitHuba";
+  } catch(e){
+    try {
+      const snap = await getJSON("repos.json", {cache:"no-cache"});
+      repos = normalize(snap.repos||[]);
+      source = `z kopii zapasowej (${ago(snap.generated_at)})`;
+    } catch(e2){
+      repos = []; source = "";
+    }
+  }
+  render();
+}
+
+function render(){
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  let list = repos.map(r => {
+    const m = meta[r.name] || {};
+    return {...r, title: m.title || prettify(r.name), desc: m.description || r.description || "Brak opisu.", emoji: m.emoji || ""};
+  }).filter(r => !q || (r.title+" "+r.name+" "+r.desc+" "+(r.language||"")).toLowerCase().includes(q));
+  list.sort(sortBy==="name" ? (a,b)=>a.title.localeCompare(b.title,"pl") : (a,b)=>new Date(b.pushed_at)-new Date(a.pushed_at));
+
+  document.getElementById("sTotal").textContent = repos.length;
+  document.getElementById("sOnline").textContent = repos.filter(r=>r.has_pages).length;
+  const latest = repos.map(r=>r.pushed_at).sort().pop();
+  document.getElementById("sLast").textContent = latest ? ago(latest) : "–";
+
+  const g = document.getElementById("grid");
+  if(!repos.length){ g.innerHTML = `<div class="empty">Nie udało się wczytać projektów. Sprawdź połączenie i odśwież stronę.</div>`; return; }
+  if(!list.length){ g.innerHTML = `<div class="empty">Brak projektów pasujących do „${esc(q)}”.</div>`; return; }
+  g.innerHTML = list.map((r,i) => {
+    const [c1,c2] = GRADS[hash(r.name)%GRADS.length];
+    const icon = r.emoji || esc(r.title.charAt(0).toUpperCase());
+    return `<article class="card" style="animation-delay:${i*40}ms">
+      <div class="top">
+        <div class="ic" style="background:linear-gradient(135deg,${c1},${c2})">${icon}</div>
+        <div style="min-width:0">
+          <div class="title">${esc(r.title)}</div>
+          <div class="slug">${esc(r.name)}</div>
+        </div>
+        ${r.has_pages ? `<span class="badge"><i></i>Online</span>` : `<span class="badge off"><i></i>Tylko kod</span>`}
+      </div>
+      <p class="desc">${esc(r.desc)}</p>
+      <div class="meta">
+        ${r.language ? `<span><i class="dot" style="background:${LANG[r.language]||"#8e8e93"}"></i>${esc(r.language)}</span>` : ""}
+        <span>🕒 ${ago(r.pushed_at)}</span>
+      </div>
+      <div class="btns">
+        ${r.has_pages ? `<a class="btn primary" href="${esc(r.pages_url)}" target="_blank" rel="noopener">Otwórz aplikację ↗</a>`
+                      : `<span class="btn primary dis">Brak strony</span>`}
+        <a class="btn ghost" href="${esc(r.html_url)}" target="_blank" rel="noopener">Kod</a>
+      </div>
+    </article>`;
+  }).join("");
+  document.getElementById("note").textContent = source ? `Lista wczytana ${source}. Nowe repozytoria pojawiają się automatycznie.` : "";
+}
+
+document.getElementById("q").addEventListener("input", render);
+document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".seg button").forEach(x=>x.classList.toggle("on", x===b));
+  sortBy = b.dataset.sort; render();
+}));
+document.addEventListener("visibilitychange", () => { if(!document.hidden) load(); });
+load();
+</script>
+</body>
+</html>

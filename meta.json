@@ -1,0 +1,15 @@
+{
+  "_info": "Opcjonalne ładniejsze nazwy i opisy. Nowe repozytoria pojawiają się automatycznie także bez wpisu tutaj.",
+  "repos": {
+    "pharma-market-intelligence-pl-app": {
+      "title": "Pharma Market Intelligence PL",
+      "description": "Statyczny dashboard rynku leków refundowanych w Polsce na danych publicznych.",
+      "emoji": "💊"
+    },
+    "trener-gitara": {
+      "title": "Trener Gitara",
+      "description": "Aplikacja do nauki gry na gitarze.",
+      "emoji": "🎸"
+    }
+  }
+}

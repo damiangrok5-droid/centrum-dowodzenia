@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-10-25T22:38:19Z",
+  "repos": [
+    {
+      "name": "okazje-gitarowe",
+      "description": "Okazje na używane gitary elektryczne (OLX, Kleinanzeigen, Reverb) – statyczna strona",
+      "language": "JavaScript",
+      "has_pages": true,
+      "homepage": "https://damiangrok5-droid.github.io/okazje-gitarowe/",
+      "html_url": "https://github.com/damiangrok5-droid/okazje-gitarowe",
+      "pushed_at": "2026-10-25T22:37:33Z",
+      "archived": false
+    },
+    {
+      "name": "pharma-market-intelligence-pl-app",
+      "description": "Pharma Market Intelligence PL – statyczny dashboard rynku leków refundowanych w Polsce (dane publiczne)",
+      "language": "CSS",
+      "has_pages": true,
+      "homepage": null,
+      "html_url": "https://github.com/damiangrok5-droid/pharma-market-intelligence-pl-app",
+      "pushed_at": "2026-10-25T21:07:40Z",
+      "archived": false
+    },
+    {
+      "name": "trener-gitara",
+      "description": null,
+      "language": "HTML",
+      "has_pages": true,
+      "homepage": null,
+      "html_url": "https://github.com/damiangrok5-droid/trener-gitara",
+      "pushed_at": "2026-10-25T20:43:28Z",
+      "archived": false
+    }
+  ]
+}
