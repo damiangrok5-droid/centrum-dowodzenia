@@ -14,6 +14,11 @@
     "okazje-gitarowe": {
       "title": "Okazje Gitarowe",
       "emoji": "🏷️"
+    },
+    "dom-wnetrza": {
+      "title": "Projekt Domu",
+      "description": "Projekt wykończenia domu: rzuty, wizualizacje, wycena i listy zakupów.",
+      "emoji": "🏠"
     }
   }
 }
