@@ -44,7 +44,8 @@ h1{font-size:32px;line-height:1.1;margin:2px 0 0;font-weight:800;letter-spacing:
 .acct{margin-left:auto;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);
   background:var(--card);border:1px solid var(--stroke);padding:6px 12px 6px 6px;border-radius:999px;
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);font-size:14px;font-weight:600}
-.acct img{width:28px;height:28px;border-radius:50%}
+.acct img,.acct .av{width:28px;height:28px;border-radius:50%}
+.acct .av{display:grid;place-items:center;color:#fff;font-size:14px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
 .stat{background:var(--card);border:1px solid var(--stroke);border-radius:18px;padding:12px 14px;
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:var(--shadow)}
@@ -90,6 +91,7 @@ h1{font-size:32px;line-height:1.1;margin:2px 0 0;font-weight:800;letter-spacing:
 @keyframes sh{to{background-position:-200% 0}}
 @media (max-width:560px){
   h1{font-size:28px} .acct span{display:none} .acct{padding:6px}
+  .stat{padding:10px 12px} .stat b{font-size:17px;line-height:1.2;min-height:20px}
   .toolbar{flex-direction:column} .seg{align-self:stretch} .seg button{flex:1}
   .grid{grid-template-columns:1fr}
 }
@@ -104,7 +106,7 @@ h1{font-size:32px;line-height:1.1;margin:2px 0 0;font-weight:800;letter-spacing:
       <h1>Centrum dowodzenia</h1>
     </div>
     <a class="acct" href="https://github.com/damiangrok5-droid" target="_blank" rel="noopener">
-      <img src="https://avatars.githubusercontent.com/u/347927826?v=4" alt="">
+      <img src="https://avatars.githubusercontent.com/u/347927826?v=4" alt="" onerror="this.replaceWith(Object.assign(document.createElement('b'),{className:'av',textContent:'D'}))">
       <span>damiangrok5-droid</span>
     </a>
   </header>
@@ -136,7 +138,8 @@ const SELF = "centrum-dowodzenia";
 const API = `https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`;
 const FALLBACK_META = {
   "pharma-market-intelligence-pl-app": {title:"Pharma Market Intelligence PL", description:"Statyczny dashboard rynku leków refundowanych w Polsce na danych publicznych.", emoji:"💊"},
-  "trener-gitara": {title:"Trener Gitara", description:"Aplikacja do nauki gry na gitarze.", emoji:"🎸"}
+  "trener-gitara": {title:"Trener Gitara", description:"Aplikacja do nauki gry na gitarze.", emoji:"🎸"},
+  "okazje-gitarowe": {title:"Okazje Gitarowe", emoji:"🏷️"}
 };
 const LANG = {JavaScript:"#f1e05a",TypeScript:"#3178c6",HTML:"#e34c26",CSS:"#663399",Python:"#3572A5",Java:"#b07219",
   "C#":"#178600",Go:"#00ADD8",Rust:"#dea584",Swift:"#F05138",Kotlin:"#A97BFF",Vue:"#41b883",Shell:"#89e051",PHP:"#4F5D95",Dart:"#00B4AB"};

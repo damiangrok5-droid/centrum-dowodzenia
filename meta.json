@@ -10,6 +10,10 @@
       "title": "Trener Gitara",
       "description": "Aplikacja do nauki gry na gitarze.",
       "emoji": "🎸"
+    },
+    "okazje-gitarowe": {
+      "title": "Okazje Gitarowe",
+      "emoji": "🏷️"
     }
   }
 }
