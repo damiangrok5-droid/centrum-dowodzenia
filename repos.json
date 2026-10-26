@@ -1,14 +1,24 @@
 {
-  "generated_at": "2026-10-25T22:38:19Z",
+  "generated_at": "2026-10-26T10:30:31Z",
   "repos": [
     {
-      "name": "okazje-gitarowe",
-      "description": "Okazje na używane gitary elektryczne (OLX, Kleinanzeigen, Reverb) – statyczna strona",
-      "language": "JavaScript",
+      "name": "grok-zwiadowca",
+      "description": "🔭 Zwiadowca Rozwiązań – MCP, skille, prompty i automatyzacje do wykorzystania z Grok Botem",
+      "language": "HTML",
       "has_pages": true,
-      "homepage": "https://damiangrok5-droid.github.io/okazje-gitarowe/",
-      "html_url": "https://github.com/damiangrok5-droid/okazje-gitarowe",
-      "pushed_at": "2026-10-25T22:37:33Z",
+      "homepage": "https://damiangrok5-droid.github.io/grok-zwiadowca/",
+      "html_url": "https://github.com/damiangrok5-droid/grok-zwiadowca",
+      "pushed_at": "2026-10-26T10:29:26Z",
+      "archived": false
+    },
+    {
+      "name": "centrum-dowodzenia",
+      "description": "Centrum dowodzenia: wszystkie moje projekty z GitHuba w jednym miejscu",
+      "language": "HTML",
+      "has_pages": true,
+      "homepage": "https://damiangrok5-droid.github.io/centrum-dowodzenia/",
+      "html_url": "https://github.com/damiangrok5-droid/centrum-dowodzenia",
+      "pushed_at": "2026-10-26T10:15:06Z",
       "archived": false
     },
     {
@@ -18,7 +28,27 @@
       "has_pages": true,
       "homepage": null,
       "html_url": "https://github.com/damiangrok5-droid/pharma-market-intelligence-pl-app",
-      "pushed_at": "2026-10-25T21:07:40Z",
+      "pushed_at": "2026-10-26T10:06:57Z",
+      "archived": false
+    },
+    {
+      "name": "okazje-gitarowe",
+      "description": "Okazje na używane gitary elektryczne (OLX, Kleinanzeigen, Reverb) – statyczna strona",
+      "language": "JavaScript",
+      "has_pages": true,
+      "homepage": "https://damiangrok5-droid.github.io/okazje-gitarowe/",
+      "html_url": "https://github.com/damiangrok5-droid/okazje-gitarowe",
+      "pushed_at": "2026-10-26T07:27:23Z",
+      "archived": false
+    },
+    {
+      "name": "dom-wnetrza",
+      "description": null,
+      "language": "JavaScript",
+      "has_pages": true,
+      "homepage": null,
+      "html_url": "https://github.com/damiangrok5-droid/dom-wnetrza",
+      "pushed_at": "2026-10-26T03:33:49Z",
       "archived": false
     },
     {
@@ -28,7 +58,7 @@
       "has_pages": true,
       "homepage": null,
       "html_url": "https://github.com/damiangrok5-droid/trener-gitara",
-      "pushed_at": "2026-10-25T20:43:28Z",
+      "pushed_at": "2026-10-26T00:58:24Z",
       "archived": false
     }
   ]
