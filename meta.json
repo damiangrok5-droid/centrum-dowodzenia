@@ -19,6 +19,11 @@
       "title": "Projekt Domu",
       "description": "Projekt wykończenia domu: rzuty, wizualizacje, wycena i listy zakupów.",
       "emoji": "🏠"
+    },
+    "grok-zwiadowca": {
+      "title": "Zwiadowca Rozwiązań",
+      "description": "Zwiad MCP, skilli, promptów i automatyzacji do wykorzystania z Grok Botem – z oceną, trudnością i gotowymi promptami.",
+      "emoji": "🔭"
     }
   }
 }
