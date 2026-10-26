@@ -107,7 +107,7 @@ h1{font-size:32px;line-height:1.1;margin:2px 0 0;font-weight:800;letter-spacing:
 button.round{border:1px solid var(--sep)}
 .acct{padding:0 14px 0 7px}
 .acct img,.acct .av{width:30px;height:30px;border-radius:50%;display:block}
-.acct .av{display:grid;place-items:center;color:#fff;font-size:14px;background:linear-gradient(135deg,#0a84ff,#5e5ce6)}
+.acct .av{display:grid;place-items:center;color:#fff;font-size:14px;background:#0071e3 linear-gradient(135deg,#0071e3,#4b48d6)}
 
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 6px;padding:0;list-style:none}
 .stat{border-radius:18px;padding:12px 14px;min-width:0}
@@ -184,7 +184,7 @@ footer.note{text-align:center;color:var(--text-2);padding:24px 10px 0;font-size:
     <div class="hbtns">
       <button id="theme" class="round glass" type="button" aria-label="Motyw: automatyczny" title="Motyw: automatyczny"></button>
       <a class="round glass acct" href="https://github.com/damiangrok5-droid" target="_blank" rel="noopener" aria-label="Profil damiangrok5-droid na GitHubie">
-        <img src="https://avatars.githubusercontent.com/u/347927826?v=4" alt="" width="30" height="30" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('b'),{className:'av',textContent:'D'}))">
+        <img src="https://avatars.githubusercontent.com/u/347927826?v=4" alt="" width="30" height="30" decoding="async" onerror="var b=document.createElement('b');b.className='av';b.textContent='D';b.setAttribute('aria-hidden','true');this.replaceWith(b)">
         <span>damiangrok5-droid</span>
       </a>
     </div>
