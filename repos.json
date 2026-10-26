@@ -33,12 +33,12 @@
     },
     {
       "name": "okazje-gitarowe",
-      "description": "Okazje na używane gitary elektryczne (OLX, Kleinanzeigen, Reverb) – statyczna strona",
+      "description": "Okazje na używane gitary elektryczne – OLX, Kleinanzeigen, Reverb, Blocket, willhaben, DBA, Tori, Allegro Lokalnie i inne; wycena z ofert porównawczych, wyszukiwanie na żywo i filtry",
       "language": "JavaScript",
       "has_pages": true,
       "homepage": "https://damiangrok5-droid.github.io/okazje-gitarowe/",
       "html_url": "https://github.com/damiangrok5-droid/okazje-gitarowe",
-      "pushed_at": "2026-10-26T07:27:23Z",
+      "pushed_at": "2026-10-26T21:30:39Z",
       "archived": false
     },
     {
