@@ -1,5 +1,5 @@
 {
-  "_info": "Opcjonalne ładniejsze nazwy i opisy. Nowe repozytoria pojawiają się automatycznie także bez wpisu tutaj.",
+  "_info": "Opcjonalne ładniejsze nazwy i opisy. Nowe repozytoria pojawiają się automatycznie także bez wpisu tutaj. Sekcja „inne” to projekty bez własnego repozytorium.",
   "repos": {
     "pharma-market-intelligence-pl-app": {
       "title": "Pharma Market Intelligence PL",
@@ -25,6 +25,43 @@
       "title": "Zwiadowca Rozwiązań",
       "description": "Zwiad MCP, skilli, promptów i automatyzacji do wykorzystania z Grok Botem – z oceną, trudnością i gotowymi promptami.",
       "emoji": "🔭"
+    },
+    "hcv-koszt-zaniechania": {
+      "title": "Pharma Strategia – WZW C",
+      "description": "Edukacyjny model kosztu zaniechania leczenia WZW C (HCV) w Polsce – szacunki na danych publicznych.",
+      "emoji": "🧬"
     }
-  }
+  },
+  "inne": [
+    {
+      "id": "machine-money",
+      "title": "Machine Money",
+      "emoji": "🤖",
+      "status": "Na X",
+      "description": "Kanał na X o ekonomii maszyn: x402, stablecoiny i agentic commerce. Zespół agentów codziennie szuka trendów, pisze posty i analizuje wyniki.",
+      "link": "https://x.com/themachinemoney",
+      "link_label": "Otwórz @themachinemoney na X"
+    },
+    {
+      "id": "trading-agent-test",
+      "title": "Trading Agent-test",
+      "emoji": "📈",
+      "status": "W teście",
+      "description": "Test agenta badającego rynek wyłącznie na wirtualnych pieniądzach, bez prawdziwych transakcji."
+    },
+    {
+      "id": "autonomiczny-zarobek",
+      "title": "Autonomiczny Zarobek",
+      "emoji": "💡",
+      "status": "Koncepcje",
+      "description": "Szukanie pomysłów na zarobek z pomocą agentów. Na razie tylko koncepcje, bez realizacji."
+    },
+    {
+      "id": "power-apps",
+      "title": "Power Apps",
+      "emoji": "🧩",
+      "status": "Czeka na test",
+      "description": "Aplikacja Power Apps przygotowana przez agenta. Czeka na test w Microsoft 365."
+    }
+  ]
 }

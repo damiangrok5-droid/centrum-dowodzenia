@@ -1,34 +1,14 @@
 {
-  "generated_at": "2026-10-26T10:30:31Z",
+  "generated_at": "2026-10-28T08:52:56Z",
   "repos": [
     {
-      "name": "grok-zwiadowca",
-      "description": "🔭 Zwiadowca Rozwiązań – MCP, skille, prompty i automatyzacje do wykorzystania z Grok Botem",
+      "name": "hcv-koszt-zaniechania",
+      "description": "Edukacyjny model farmakoekonomiczny HCV w Polsce – szacunki na danych publicznych",
       "language": "HTML",
-      "has_pages": true,
-      "homepage": "https://damiangrok5-droid.github.io/grok-zwiadowca/",
-      "html_url": "https://github.com/damiangrok5-droid/grok-zwiadowca",
-      "pushed_at": "2026-10-26T10:29:26Z",
-      "archived": false
-    },
-    {
-      "name": "centrum-dowodzenia",
-      "description": "Centrum dowodzenia: wszystkie moje projekty z GitHuba w jednym miejscu",
-      "language": "HTML",
-      "has_pages": true,
-      "homepage": "https://damiangrok5-droid.github.io/centrum-dowodzenia/",
-      "html_url": "https://github.com/damiangrok5-droid/centrum-dowodzenia",
-      "pushed_at": "2026-10-26T10:15:06Z",
-      "archived": false
-    },
-    {
-      "name": "pharma-market-intelligence-pl-app",
-      "description": "Pharma Market Intelligence PL – statyczny dashboard rynku leków refundowanych w Polsce (dane publiczne)",
-      "language": "CSS",
       "has_pages": true,
       "homepage": null,
-      "html_url": "https://github.com/damiangrok5-droid/pharma-market-intelligence-pl-app",
-      "pushed_at": "2026-10-26T10:06:57Z",
+      "html_url": "https://github.com/damiangrok5-droid/hcv-koszt-zaniechania",
+      "pushed_at": "2026-10-28T08:44:53Z",
       "archived": false
     },
     {
@@ -38,17 +18,17 @@
       "has_pages": true,
       "homepage": "https://damiangrok5-droid.github.io/okazje-gitarowe/",
       "html_url": "https://github.com/damiangrok5-droid/okazje-gitarowe",
-      "pushed_at": "2026-10-26T21:30:39Z",
+      "pushed_at": "2026-10-28T07:31:50Z",
       "archived": false
     },
     {
-      "name": "dom-wnetrza",
-      "description": null,
-      "language": "JavaScript",
+      "name": "pharma-market-intelligence-pl-app",
+      "description": "Pharma Market Intelligence PL – statyczny dashboard rynku leków refundowanych w Polsce (dane publiczne)",
+      "language": "CSS",
       "has_pages": true,
       "homepage": null,
-      "html_url": "https://github.com/damiangrok5-droid/dom-wnetrza",
-      "pushed_at": "2026-10-26T03:33:49Z",
+      "html_url": "https://github.com/damiangrok5-droid/pharma-market-intelligence-pl-app",
+      "pushed_at": "2026-10-27T11:44:13Z",
       "archived": false
     },
     {
@@ -58,7 +38,37 @@
       "has_pages": true,
       "homepage": null,
       "html_url": "https://github.com/damiangrok5-droid/trener-gitara",
-      "pushed_at": "2026-10-26T00:58:24Z",
+      "pushed_at": "2026-10-27T08:09:13Z",
+      "archived": false
+    },
+    {
+      "name": "centrum-dowodzenia",
+      "description": "Centrum dowodzenia: wszystkie moje projekty z GitHuba w jednym miejscu",
+      "language": "HTML",
+      "has_pages": true,
+      "homepage": "https://damiangrok5-droid.github.io/centrum-dowodzenia/",
+      "html_url": "https://github.com/damiangrok5-droid/centrum-dowodzenia",
+      "pushed_at": "2026-10-26T21:56:51Z",
+      "archived": false
+    },
+    {
+      "name": "dom-wnetrza",
+      "description": null,
+      "language": "HTML",
+      "has_pages": true,
+      "homepage": null,
+      "html_url": "https://github.com/damiangrok5-droid/dom-wnetrza",
+      "pushed_at": "2026-10-26T21:36:31Z",
+      "archived": false
+    },
+    {
+      "name": "grok-zwiadowca",
+      "description": "🔭 Zwiadowca Rozwiązań – MCP, skille, prompty i automatyzacje do wykorzystania z Grok Botem",
+      "language": "HTML",
+      "has_pages": true,
+      "homepage": "https://damiangrok5-droid.github.io/grok-zwiadowca/",
+      "html_url": "https://github.com/damiangrok5-droid/grok-zwiadowca",
+      "pushed_at": "2026-10-26T14:50:56Z",
       "archived": false
     }
   ]
